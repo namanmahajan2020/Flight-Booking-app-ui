@@ -28,7 +28,11 @@ class HomePage extends StatelessWidget {
                         Container(
                           padding: EdgeInsets.all(10),
                           decoration: BoxDecoration(
-                            border: Border.all(color: Colors.grey, width: 0.5),
+                            border: Border.all(
+                              color: Colors.grey[300] ?? Colors.grey,
+                              width: 0.5,
+                            ),
+
                             color: Colors.white,
                             shape: BoxShape.circle,
                           ),
@@ -38,7 +42,7 @@ class HomePage extends StatelessWidget {
                           "Fare Deals",
                           style: TextStyle(
                             fontSize: 19,
-                            fontWeight: FontWeight.w400,
+                            fontWeight: FontWeight.w500,
                           ),
                         ),
                         Container(
@@ -60,7 +64,10 @@ class HomePage extends StatelessWidget {
                     Container(
                       height: 80,
                       decoration: BoxDecoration(
-                        border: Border.all(color: Colors.grey, width: 0.5),
+                        border: Border.all(
+                          color: Colors.grey[300] ?? Colors.grey,
+                          width: 1,
+                        ),
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(22),
                       ),
