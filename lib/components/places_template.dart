@@ -3,37 +3,83 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 
 class PlacesTemplate extends StatelessWidget {
-  const PlacesTemplate({super.key});
+  final String className;
+  final String placeName;
+  final String from;
+  final String imagePath;
+  const PlacesTemplate({
+    super.key,
+    required this.className,
+    required this.placeName,
+    required this.from,
+    required this.imagePath,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 171.5,
-      width: 171.5,
+      height: 176.5,
+      width: 176.5,
       decoration: BoxDecoration(
         border: Border.all(color: Colors.grey, width: 0.5),
         color: Colors.black,
         borderRadius: BorderRadius.circular(22),
-        image: const DecorationImage(
-          image: AssetImage("lib/images/kuala_lumpur.jpg"),
-          fit: BoxFit.cover,
-        ),
+        image: DecorationImage(image: AssetImage(imagePath), fit: BoxFit.cover),
       ),
       child: Padding(
         padding: const EdgeInsets.all(14.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("From", style: TextStyle(color: Colors.white, fontSize: 13)),
-            Text(
-              "Kuala Lumpur",
-              style: TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-                fontSize: 13,
-              ),
+            Stack(
+              children: [
+                Text(
+                  className,
+                  style: TextStyle(
+                    fontSize: 11,
+                    fontWeight: FontWeight.bold,
+                    foreground:
+                        Paint()
+                          ..style = PaintingStyle.stroke
+                          ..strokeWidth = 0.3
+                          ..color = Colors.grey[900]!,
+                  ),
+                ),
+                Text(
+                  className,
+                  style: TextStyle(
+                    fontSize: 11,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                ),
+              ],
             ),
-            SizedBox(height: 62),
+            Stack(
+              children: [
+                Text(
+                  placeName,
+                  style: TextStyle(
+                    fontSize: 13,
+                    fontWeight: FontWeight.bold,
+                    foreground:
+                        Paint()
+                          ..style = PaintingStyle.stroke
+                          ..strokeWidth = 0.3
+                          ..color = Colors.grey[900]!,
+                  ),
+                ),
+                Text(
+                  placeName,
+                  style: TextStyle(
+                    fontSize: 13,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 66),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.end,
@@ -41,17 +87,53 @@ class PlacesTemplate extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      "From",
-                      style: TextStyle(color: Colors.white, fontSize: 13),
+                    Stack(
+                      children: [
+                        Text(
+                          "From",
+                          style: TextStyle(
+                            fontSize: 11,
+                            fontWeight: FontWeight.bold,
+                            foreground:
+                                Paint()
+                                  ..style = PaintingStyle.stroke
+                                  ..strokeWidth = 0.4
+                                  ..color = Colors.grey[900]!,
+                          ),
+                        ),
+                        Text(
+                          "From",
+                          style: TextStyle(
+                            fontSize: 11,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
                     ),
-                    Text(
-                      "SGD 168*",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.w900,
-                        fontSize: 13,
-                      ),
+                    Stack(
+                      children: [
+                        Text(
+                          from,
+                          style: TextStyle(
+                            fontSize: 13,
+                            fontWeight: FontWeight.w900,
+                            foreground:
+                                Paint()
+                                  ..style = PaintingStyle.stroke
+                                  ..strokeWidth = 0.3
+                                  ..color = Colors.grey[900]!,
+                          ),
+                        ),
+                        Text(
+                          from,
+                          style: TextStyle(
+                            fontSize: 13,
+                            fontWeight: FontWeight.w900,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
                     ),
                   ],
                 ),
