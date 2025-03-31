@@ -64,7 +64,91 @@ class HomePage extends StatelessWidget {
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(22),
                       ),
-                      child: Row(children: [Text("-")]),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                "From",
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w600,
+                                  color: Colors.grey[500],
+                                ),
+                              ),
+                              Text(
+                                "Singapore",
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Text(
+                                "- - - - -",
+                                style: TextStyle(
+                                  fontSize: 11,
+                                  color: Colors.grey[300],
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              Container(
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  border: Border.all(
+                                    color: Colors.grey,
+                                    width: 0.5,
+                                  ),
+                                  color: Color(0xFF134748),
+                                ),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(7.0),
+                                  child: Icon(
+                                    Icons.flight_takeoff,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                              Text(
+                                "- - - - -",
+                                style: TextStyle(
+                                  fontSize: 11,
+                                  color: Colors.grey[300],
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ],
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                "To",
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w600,
+                                  color: Colors.grey[500],
+                                ),
+                              ),
+                              Text(
+                                "All Destinations",
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                     SizedBox(height: 20),
                     Expanded(
