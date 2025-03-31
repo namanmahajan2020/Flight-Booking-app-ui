@@ -1,3 +1,4 @@
+import 'package:flight_booking/components/places_template.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -16,7 +17,7 @@ class HomePage extends StatelessWidget {
           Container(
             child: SafeArea(
               child: Padding(
-                padding: const EdgeInsets.only(left: 24.0,right: 24,top:24),
+                padding: const EdgeInsets.only(left: 24.0, right: 24, top: 24),
                 child: Column(
                   children: [
                     SizedBox(height: 10),
@@ -72,93 +73,11 @@ class HomePage extends StatelessWidget {
                           children: [
                             Row(
                               children: [
-                                Container(
-                                  height: 171.5,
-                                  width: 171.5,
-                                  decoration: BoxDecoration(
-                                    border: Border.all(
-                                      color: Colors.grey,
-                                      width: 0.5,
-                                    ),
-                                    color: Colors.white,
-                                    borderRadius: BorderRadius.circular(22),
-                                  ),
-                                ),
+                                PlacesTemplate(),
                                 SizedBox(width: 20),
-                                Container(
-                                  height: 171.5,
-                                  width: 171.5,
-                                  decoration: BoxDecoration(
-                                    border: Border.all(
-                                      color: Colors.grey,
-                                      width: 0.5,
-                                    ),
-                                    color: Colors.white,
-                                    borderRadius: BorderRadius.circular(22),
-                                  ),
-                                ),
                               ],
                             ),
                             SizedBox(height: 20),
-                            Row(
-                              children: [
-                                Container(
-                                  height: 171.5,
-                                  width: 171.5,
-                                  decoration: BoxDecoration(
-                                    border: Border.all(
-                                      color: Colors.grey,
-                                      width: 0.5,
-                                    ),
-                                    color: Colors.white,
-                                    borderRadius: BorderRadius.circular(22),
-                                  ),
-                                ),
-                                SizedBox(width: 20),
-                                Container(
-                                  height: 171.5,
-                                  width: 171.5,
-                                  decoration: BoxDecoration(
-                                    border: Border.all(
-                                      color: Colors.grey,
-                                      width: 0.5,
-                                    ),
-                                    color: Colors.white,
-                                    borderRadius: BorderRadius.circular(22),
-                                  ),
-                                ),
-                              ],
-                            ),
-                            SizedBox(height: 20),
-                            Row(
-                              children: [
-                                Container(
-                                  height: 171.5,
-                                  width: 171.5,
-                                  decoration: BoxDecoration(
-                                    border: Border.all(
-                                      color: Colors.grey,
-                                      width: 0.5,
-                                    ),
-                                    color: Colors.white,
-                                    borderRadius: BorderRadius.circular(22),
-                                  ),
-                                ),
-                                SizedBox(width: 20),
-                                Container(
-                                  height: 171.5,
-                                  width: 171.5,
-                                  decoration: BoxDecoration(
-                                    border: Border.all(
-                                      color: Colors.grey,
-                                      width: 0.5,
-                                    ),
-                                    color: Colors.white,
-                                    borderRadius: BorderRadius.circular(22),
-                                  ),
-                                ),
-                              ],
-                            ),
                           ],
                         ),
                       ),
