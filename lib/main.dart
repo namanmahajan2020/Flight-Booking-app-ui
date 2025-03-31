@@ -1,4 +1,4 @@
-import 'package:flight_booking/pages/home_page.dart';
+import 'package:flight_booking/pages/controler.dart';
 import 'package:flutter/material.dart';
 void main() {
   runApp(const MyApp());
@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: Controler(),
     ); 
   }
 }
