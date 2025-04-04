@@ -1,5 +1,4 @@
 import 'package:flight_booking/components/cards.dart';
-import 'package:flight_booking/components/places_template.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -116,14 +115,18 @@ class _MyTripsState extends State<MyTrips> {
                     ),
                     SizedBox(height: 20),
                     Container(
-                      height: 200,
+                      height: 250,
                       child: Stack(
                         alignment: Alignment.bottomCenter,
                         children: [
                           PageView(
                             scrollDirection: Axis.horizontal,
                             controller: _controller,
-                            children: [MyCard(image: "image")],
+                            children: [
+                              MyCard(image: "lib/images/EiffelTower.jpeg"),
+                              MyCard(image: "lib/images/London.jpeg"),
+                              MyCard(image: "lib/images/falls2.jpg"),
+                            ],
                           ),
                           Positioned(
                             bottom: 10,
@@ -131,11 +134,46 @@ class _MyTripsState extends State<MyTrips> {
                               controller: _controller,
                               count: 3,
                               effect: ExpandingDotsEffect(
-                                activeDotColor: Colors.grey.shade800,
+                                activeDotColor: Colors.white,
+                                dotHeight: 10,
+                                dotWidth: 10,
+                                spacing: 4,
                               ),
                             ),
                           ),
                         ],
+                      ),
+                    ),
+                    SizedBox(height: 20),
+                    Expanded(
+                      child: SingleChildScrollView(
+                        child: Column(
+                          children: [
+                            Container(
+                              height: 160,
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                border: Border.all(
+                                  color: Colors.grey[300] ?? Colors.grey,
+                                  width: 1,
+                                ),
+                                borderRadius: BorderRadius.circular(22),
+                              ),
+                            ),
+                            SizedBox(height: 20),
+                            Container(
+                              height: 160,
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                border: Border.all(
+                                  color: Colors.grey[300] ?? Colors.grey,
+                                  width: 1,
+                                ),
+                                borderRadius: BorderRadius.circular(22),
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ],
