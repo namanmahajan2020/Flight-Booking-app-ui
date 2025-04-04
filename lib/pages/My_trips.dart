@@ -1,9 +1,17 @@
+import 'package:flight_booking/components/cards.dart';
 import 'package:flight_booking/components/places_template.dart';
 import 'package:flutter/material.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-class MyTrips extends StatelessWidget {
+class MyTrips extends StatefulWidget {
   const MyTrips({super.key});
 
+  @override
+  State<MyTrips> createState() => _MyTripsState();
+}
+
+class _MyTripsState extends State<MyTrips> {
+  final PageController _controller = PageController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -105,6 +113,30 @@ class MyTrips extends StatelessWidget {
                           ),
                         ),
                       ],
+                    ),
+                    SizedBox(height: 20),
+                    Container(
+                      height: 200,
+                      child: Stack(
+                        alignment: Alignment.bottomCenter,
+                        children: [
+                          PageView(
+                            scrollDirection: Axis.horizontal,
+                            controller: _controller,
+                            children: [MyCard(image: "image")],
+                          ),
+                          Positioned(
+                            bottom: 10,
+                            child: SmoothPageIndicator(
+                              controller: _controller,
+                              count: 3,
+                              effect: ExpandingDotsEffect(
+                                activeDotColor: Colors.grey.shade800,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ],
                 ),
